@@ -7,6 +7,8 @@ import me.chanjar.weixin.common.exception.WxErrorException;
 
 @WebService
 public interface WechatTokenService {
+    public String getAppId();
+
     public String getAccessToken() throws WxErrorException;
 
     public String getJsapiTicket() throws WxErrorException;
