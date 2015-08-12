@@ -1,7 +1,12 @@
 package com.mkingzhu.wechat.center.server.webservice.facade;
 
-public interface WechatTokenService {
-    public String getAccessToken();
+import me.chanjar.weixin.common.bean.WxJsapiSignature;
+import me.chanjar.weixin.common.exception.WxErrorException;
 
-    public String getJsapiTicket();
+public interface WechatTokenService {
+    public String getAccessToken() throws WxErrorException;
+
+    public String getJsapiTicket() throws WxErrorException;
+
+    public WxJsapiSignature createJsapiSignature(String url) throws WxErrorException;
 }
